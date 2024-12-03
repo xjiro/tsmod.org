@@ -1,0 +1,182 @@
+:root {
+    --bs-blue: #375a7f;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #e83e8c;
+    --bs-red: #e74c3c;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #f39c12;
+    --bs-green: #00bc8c;
+    --bs-teal: #20c997;
+    --bs-cyan: #3498db;
+    --bs-white: #fff;
+    --bs-gray: #888;
+    --bs-gray-dark: #303030;
+    --bs-primary: #008966;
+    --bs-secondary: #444;
+    --bs-success: #00bc8c;
+    --bs-info: #3498db;
+    --bs-warning: #f39c12;
+    --bs-danger: #e74c3c;
+    --bs-light: #adb5bd;
+    --bs-dark: #303030;
+    --bs-font-sans-serif: "CPMono_v07 Plain", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --bs-font-monospace: "CPMono_v07 Plain", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+:root {
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --bs-link-color: var(--bs-primary);
+    --bs-link-hover-color: var(--bs-secondary);
+}
+
+@import "./variables";
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "./bootswatch.scss";
+
+.bg-blur {
+    background: rgba(10, 10, 10, .4);
+    /* filter blur */
+    backdrop-filter: blur(20px);
+}
+
+body {
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/bg.webp') no-repeat center center fixed;
+    opacity: 0.2;
+    /* Set your desired opacity here */
+    z-index: -1;
+}
+
+// blog.css
+
+/* stylelint-disable @stylistic/selector-list-comma-newline-after */
+
+.blog-header-logo {
+    font-family: "CPMono_v07 Plain", "Playfair Display", Georgia, "Times New Roman", serif
+        /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+    ;
+    font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "CPMono_v07 Plain", "Playfair Display", Georgia, "Times New Roman", serif
+        /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+    ;
+}
+
+.flex-auto {
+    flex: 0 0 auto;
+}
+
+.h-250 {
+    height: 250px;
+}
+
+@media (min-width: 768px) {
+    .h-md-250 {
+        height: 250px;
+    }
+}
+
+/* Pagination */
+.blog-pagination {
+    margin-bottom: 4rem;
+}
+
+/*
+   * Blog posts
+   */
+.blog-post {
+    margin-bottom: 4rem;
+}
+
+.blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #727272;
+}
+
+// ts.esix.io
+html {
+    font-family: 'CPMono_v07 Plain';
+    font-weight: normal;
+    font-style: normal;
+}
+
+#logo {
+    width: 3em;
+    height: 3em;
+}
+
+#menu_user>img {
+    width: 3em;
+    height: 3em;
+}
+
+.avatar {
+    border-radius: 0.25rem;
+}
+
+.small-avatar {
+    border-radius: 0.25rem;
+    width: 2em;
+}
+
+body {
+    padding-top: 40px;
+}
+
+#footbrand {
+    opacity: 0.3;
+    height: 3em;
+    width: 3em;
+}
+
+.table-borderless {
+    border: 0;
+}
+
+.playerlist {
+    margin-bottom: 0;
+}
+
+.playerlist>li {
+    list-style-type: none;
+}
+
+td {
+    vertical-align: middle;
+}
+
+a {
+    color: #00bc8c;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #009670;
+}

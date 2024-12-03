@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% set page = "maps" %}
+{% block content %}
+<style>
+    #maps {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+    }
+    #maps li {
+        display: inline-block;
+        width: 100%;
+    }
+    @media (min-width: 576px) {
+        #maps li {
+            width: 50%;
+        }
+    }
+    @media (min-width: 992px) {
+        #maps li {
+            width: 25%;
+        }
+    }
+</style>
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="display-3 text-light">Maps</h1>
+        <ul id="maps">
+        </ul>
+    </div>
+</div>
+{% endblock %}

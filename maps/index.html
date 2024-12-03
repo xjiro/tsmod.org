@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+
+    <script src="/static/nunjucks.min.js"></script>
+    <script src="/static/jquery-3.7.1.min.js"></script>
+    <script src="/static/bootstrap.bundle.min.js"></script>
+    <script src="/static/moment.min.js"></script>
+
+    <link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16" />
+
+
+    <title>The Specialists - Maps</title>
+
+    <link href="/static/style.css" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            nunjucks.configure('/pages', { autoescape: true });
+            nunjucks.render('maps.html', function (err, res) {
+                if (err) {
+                    console.error(err);
+                } else {
+                    document.body.innerHTML = res;
+                    // load and run the script at page.home.js
+                    var script = document.createElement('script');
+                    script.src = '/static/page.maps.js';
+                    document.body.appendChild(script);
+                    script = document.createElement('script');
+                    script.src = '/static/post.js';
+                    document.body.appendChild(script);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body data-bs-theme="dark">
+</body>
+
+</html>

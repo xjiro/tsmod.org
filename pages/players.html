@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% set page = "players" %}
+{% block content %}
+<style>
+#players > li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 1em;
+    padding-right: 1em;
+    margin-bottom: 1em;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+@media (min-width: 576px) {
+    #players > li {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    #players > li {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    #players > li {
+        width: calc(100% / 2 - 1em);
+    }
+}
+@media (min-width: 1200px) {
+    #players > li {
+        width: calc(100% / 3 - 1em);
+    }
+}
+#players > li > a > img {
+    width: 4em;
+    margin-right: 1em;
+}
+</style>
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="display-3 text-light">Players</h1>
+        <ul id="players">
+        </ul>
+    </div>
+</div>
+{% endblock %}

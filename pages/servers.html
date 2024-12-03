@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% set page = "servers" %}
+{% block content %}
+<style>
+    .table td {
+        padding: 0 .2em;
+    }
+</style>
+<link rel="stylesheet" href="/static/fontawesome.min.css" />
+<link rel="stylesheet" href="/static/brands.min.css" />
+<link rel="stylesheet" href="/static/solid.min.css" />
+
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="display-3 text-light">Servers</h1>
+        <div id="lastupdate" class="mb-2"></div>
+        <div id="servers">
+        </div>
+    </div>
+</div>
+{% endblock %}

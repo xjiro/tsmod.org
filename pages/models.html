@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% set page = "models" %}
+{% block content %}
+<style>
+    #models {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+    }
+    #models li {
+        display: inline-block;
+        width: 100%;
+    }
+    @media (min-width: 576px) {
+        #models li {
+            width: 50%;
+        }
+    }
+    @media (min-width: 992px) {
+        #models li {
+            width: 25%;
+        }
+    }
+</style>
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="display-3 text-light">Models</h1>
+        <ul id="models">
+        </ul>
+    </div>
+</div>
+{% endblock %}
