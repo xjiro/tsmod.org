@@ -63,6 +63,13 @@ body::before {
     z-index: -1;
 }
 
+
+#jumbotron {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 // blog.css
 
 /* stylelint-disable @stylistic/selector-list-comma-newline-after */
